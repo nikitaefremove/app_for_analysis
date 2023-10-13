@@ -62,7 +62,6 @@ pandas==1.3.3
 pydantic==2.4.2
 uvicorn==0.23.2
 fastapi==0.103.2
-
 ```
 
 
