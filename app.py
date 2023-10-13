@@ -136,13 +136,13 @@ app = FastAPI()
 
 @app.get("/get_dataframe/", response_class=HTMLResponse)
 def get_dataframe(month: int, year: int, code: str):
-    # Get the dataframe using your function
+    # Get the dataframe
     try:
         result = main_df(month, year, code)
     except Exception as e:
         raise HTTPException(status_code=400, detail=f"Error: {e}")
 
-    # Convert the dataframe to an HTML table format
+    # Convert the dataframe to an HTML
     return result.to_html()
 
 
