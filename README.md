@@ -1,64 +1,63 @@
 # FastAPI Application For Creating Dataframe
 
-This application provides an API endpoint that, 
-based on specific parameters such as month, year, and code, 
-constructs and returns a dataframe. It's built using FastAPI 
-and can be containerized using Docker.
+This application provides an API endpoint that,      
+based on specific parameters such as month, year, and code,     
+constructs and returns a dataframe. It's built using FastAPI     
+and can be containerized using Docker.    
 
-### Features
+### Features     
 
-FastAPI Framework: Ensures high performance and easy, Pythonic API development.
-Docker Integration: Enables easy setup, consistent environments, and deployment.
-Parameter-Based Data Fetching: Create dataframes dynamically based on provided month, year, and code.
+FastAPI Framework: Ensures high performance and easy, Pythonic API development.      
+Docker Integration: Enables easy setup, consistent environments, and deployment.     
+Parameter-Based Data Fetching: Create dataframes dynamically based on provided month, year, and code.      
 
-### Prerequisites
+### Prerequisites    
 
-Docker
-Python 3.8+ (if running outside Docker)
+Docker     
+Python 3.8+ (if running outside Docker)     
 
 
-### Installation & Running
+### Installation & Running     
 
-#### Building the Docker Image:
+#### Building the Docker Image:     
 ```
-docker build -t fastapi-app .
-```
-
-#### Run the Docker Container:
-```
-docker run -p 8000:8000 fastapi-app
-
+docker build -t fastapi-app .     
 ```
 
-The application will start and be accessible at 'http://localhost:8000'.
+#### Run the Docker Container:    
+```
+docker run -p 8000:8000 fastapi-app    
+```
 
-### Without Docker:
-If you wish to run the application without Docker, 
-ensure you have the required Python packages installed 
-and simply use Uvicorn to serve the application.
+The application will start and be accessible at 'http://localhost:8000'.    
+
+### Without Docker:     
+If you wish to run the application without Docker,      
+ensure you have the required Python packages installed     
+and simply use Uvicorn to serve the application.    
 ```
-uvicorn main:app --reload
+uvicorn main:app --reload    
 ```
-### API Endpoints
+### API Endpoints    
 
 ```
-GET /get_dataframe/
+GET /get_dataframe/     
 ```
-Fetch and create a dataframe based on month, year, and code.
+Fetch and create a dataframe based on month, year, and code.     
 
-#### Parameters:
+#### Parameters:     
 
-month: The month for the data (1-12).
-year: The year for the data.
-code: The specific code to filter or categorize the data.
+month: The month for the data (1-12).     
+year: The year for the data.     
+code: The specific code to filter or categorize the data.     
 
-#### Example Request:
+#### Example Request:     
 ```
-http://127.0.0.1:8000/get_dataframe/?month=5&year=2022&code=23.52.10.130
+http://127.0.0.1:8000/get_dataframe/?month=5&year=2022&code=23.52.10.130     
 ```
-### Requirements
-```
-numpy==1.21.0
+### Requirements     
+```   
+numpy==1.21.0 
 pandas==1.3.3
 pydantic==2.4.2
 uvicorn==0.23.2
