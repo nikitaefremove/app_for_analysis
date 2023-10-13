@@ -152,5 +152,4 @@ if __name__ == '__main__':
     uvicorn.run(app, host="0.0.0.0", port=8000)
 
 # For test
-# FastAPI http://127.0.0.1:8000/get_dataframe/?month=5&year=2022&code=23.52.10.130
-# Docker http://0.0.0.0:8000/get_dataframe/?month=5&year=2022&code=23.52.10.130
+#  http://127.0.0.1:8000/get_dataframe/?month=5&year=2022&code=23.52.10.130
